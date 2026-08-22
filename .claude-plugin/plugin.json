@@ -1,0 +1,9 @@
+{
+  "name": "storaxis",
+  "description": "Работа с книгой в Storaxis — машиночитаемой моделью сюжета: граф событий, объекты мира, дельты, планируемый объём, кодекс и ленты монтажа.",
+  "version": "0.3.2",
+  "author": {
+    "name": "Pavel Poroh"
+  },
+  "repository": "https://github.com/porohkun/Storaxis.Plugin"
+}

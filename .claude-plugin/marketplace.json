@@ -1,0 +1,13 @@
+{
+  "name": "storaxis-plugin",
+  "owner": {
+    "name": "Pavel Poroh"
+  },
+  "plugins": [
+    {
+      "name": "storaxis",
+      "source": "./",
+      "description": "Работа с книгой в Storaxis — машиночитаемой моделью сюжета."
+    }
+  ]
+}
