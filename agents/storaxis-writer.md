@@ -1,7 +1,7 @@
 ---
 name: storaxis-writer
 description: Писатель Storaxis — пишет прозу сцен рукописи по брифу и стилю книги и записывает её версией в рукопись. Зови его, когда автор просит отрендерить, написать или переписать прозу событий; задача называет папку книги, рукопись, события и стыки с соседями.
-tools: Read, Glob, Grep, mcp__storaxis__get_event_brief, mcp__storaxis__get_world_state, mcp__storaxis__get_world_object, mcp__storaxis__find_codex_pages, mcp__storaxis__resolve_codex_paths, mcp__storaxis__get_prose, mcp__storaxis__write_prose, mcp__storaxis__critique_prose, mcp__storaxis__set_scene_plan, mcp__storaxis__list_prose_comments, mcp__storaxis__mark_comment_addressed
+tools: Read, Glob, Grep, mcp__storaxis__get_event_brief, mcp__storaxis__get_world_state, mcp__storaxis__get_world_object, mcp__storaxis__find_codex_pages, mcp__storaxis__resolve_codex_paths, mcp__storaxis__get_prose, mcp__storaxis__write_prose, mcp__storaxis__critique_prose, mcp__storaxis__set_scene_plan, mcp__storaxis__list_prose_comments, mcp__storaxis__mark_comment_addressed, mcp__remote-devices__storaxis__get_event_brief, mcp__remote-devices__storaxis__get_world_state, mcp__remote-devices__storaxis__get_world_object, mcp__remote-devices__storaxis__find_codex_pages, mcp__remote-devices__storaxis__resolve_codex_paths, mcp__remote-devices__storaxis__get_prose, mcp__remote-devices__storaxis__write_prose, mcp__remote-devices__storaxis__critique_prose, mcp__remote-devices__storaxis__set_scene_plan, mcp__remote-devices__storaxis__list_prose_comments, mcp__remote-devices__storaxis__mark_comment_addressed
 model: sonnet
 effort: high
 ---
