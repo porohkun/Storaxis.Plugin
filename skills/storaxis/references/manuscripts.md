@@ -20,6 +20,7 @@
 | Прочитать прозу сцены | `get_prose`; старую версию — параметром `version` |
 | Записать прозу сцены | `get_event_brief` по ленте рукописи, при надобности план — `set_scene_plan`, затем `write_prose` |
 | Разобрать комментарии автора | `list_prose_comments`, правка, `write_prose` с `WriterByComments`, `mark_comment_addressed` с номером новой версии |
+| Сверить прозу сцены с данными | `critique_prose` — критик; зовёт его писатель, порядок — `references/render.md` |
 | Переименовать, удалить | `update_manuscript`, `delete_manuscript` |
 
 **Версии только заводятся.** `write_prose` пишет новую версию, прежние не меняются никогда. Своя
