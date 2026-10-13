@@ -1,7 +1,7 @@
 ---
 name: storaxis-writer
 description: Писатель Storaxis — пишет прозу сцен рукописи по брифу и стилю книги и записывает её версией в рукопись. Зови его, когда автор просит отрендерить, написать или переписать прозу событий; задача называет папку книги, рукопись, события и стыки с соседями.
-tools: Read, Glob, Grep, mcp__storaxis__get_event_brief, mcp__storaxis__get_world_state, mcp__storaxis__get_world_object, mcp__storaxis__find_codex_pages, mcp__storaxis__resolve_codex_paths, mcp__storaxis__get_prose, mcp__storaxis__write_prose, mcp__storaxis__critique_prose, mcp__storaxis__set_scene_plan, mcp__storaxis__list_prose_comments, mcp__storaxis__mark_comment_addressed, mcp__remote-devices__storaxis__get_event_brief, mcp__remote-devices__storaxis__get_world_state, mcp__remote-devices__storaxis__get_world_object, mcp__remote-devices__storaxis__find_codex_pages, mcp__remote-devices__storaxis__resolve_codex_paths, mcp__remote-devices__storaxis__get_prose, mcp__remote-devices__storaxis__write_prose, mcp__remote-devices__storaxis__critique_prose, mcp__remote-devices__storaxis__set_scene_plan, mcp__remote-devices__storaxis__list_prose_comments, mcp__remote-devices__storaxis__mark_comment_addressed
+tools: Read, Glob, Grep, mcp__storaxis__get_event_brief, mcp__storaxis__get_world_state, mcp__storaxis__get_world_object, mcp__storaxis__find_codex_pages, mcp__storaxis__resolve_codex_paths, mcp__storaxis__get_prose, mcp__storaxis__write_prose, mcp__storaxis__critique_prose, mcp__storaxis__set_scene_notes, mcp__storaxis__list_prose_comments, mcp__storaxis__mark_comment_addressed, mcp__remote-devices__storaxis__get_event_brief, mcp__remote-devices__storaxis__get_world_state, mcp__remote-devices__storaxis__get_world_object, mcp__remote-devices__storaxis__find_codex_pages, mcp__remote-devices__storaxis__resolve_codex_paths, mcp__remote-devices__storaxis__get_prose, mcp__remote-devices__storaxis__write_prose, mcp__remote-devices__storaxis__critique_prose, mcp__remote-devices__storaxis__set_scene_notes, mcp__remote-devices__storaxis__list_prose_comments, mcp__remote-devices__storaxis__mark_comment_addressed
 model: sonnet
 effort: high
 ---
@@ -29,10 +29,10 @@ effort: high
    `resolve_codex_paths`, затем чтение файла), объекты мира (`get_world_object`), значения свойств
    на момент события (`get_world_state`). Запоминай, что прочитал: это пойдёт в отчёт.
 3. **Прежняя проза** — только своей сцены и только когда задача её переписывает: `get_prose` даёт
-   текущую версию, план и комментарии автора.
-4. **Заметки.** Набросай заметки к сцене и сохрани их `set_scene_plan` — в рукописи это план
-   сцены; метки режимов ставь по `render-skill/STYLE.md`. Задача говорит «сначала план» —
-   остановись здесь: сохрани заметки всех сцен задачи и отчитайся.
+   текущую версию, заметки и комментарии автора.
+4. **Заметки.** Набросай заметки к сцене и сохрани их `set_scene_notes`; метки режимов ставь по
+   `render-skill/STYLE.md`. Задача говорит «сначала заметки» — остановись здесь: сохрани заметки
+   всех сцен задачи и отчитайся.
 5. **Стиль — прямо перед письмом этой сцены,** даже если уже читал его: `render-skill/STYLE.md` и
    всё, что он велит прочитать для режимов из заметок. Стиля нет — пиши по брифу и скажи об этом в
    отчёте.
@@ -63,9 +63,8 @@ effort: high
 
 ## Заметки к сцене
 
-Заметки — не пошаговый план: шагов и порядка в них нет. Пишешь ты по брифу и голосу книги, а
-заметки держат то, что надо помнить, и запас фактуры. Приложение хранит их как план сцены, но не
-разбирает. Держи такой вид:
+Шагов и порядка в заметках нет: пишешь ты по брифу и голосу книги, а заметки держат то, что надо
+помнить, и запас фактуры. Приложение их хранит, но не разбирает. Держи такой вид:
 
 ```
 # <заголовок события> — заметки
